@@ -1,11 +1,13 @@
 package com.javasm.demo.entity;
 
 import cn.hutool.core.date.DateTime;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * @author sunshine
@@ -20,9 +22,13 @@ public class UserInfo implements Serializable {
     private String password;
     private int age;
     private String image;
-    private String birthday;
-    private String lastLoginTime;
-    private String createTime;
-    private String updateTime;
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd")
+    private Date birthday;
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime lastLoginTime;
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime createTime;
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime updateTime;
     private int rid;
 }

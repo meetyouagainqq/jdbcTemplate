@@ -23,10 +23,7 @@ import java.util.Date;
  */
 public class DruidTest {
     public static void main(String[] args) throws Exception {
-        //new Thread(DruidTest::demo).start();
-        //demo1();
-        //demo2();
-        demo3();
+      demo();
     }
 
     private static void demo3() throws SQLException {
@@ -56,8 +53,8 @@ public class DruidTest {
                 userInfo.setUsername("sunshine");
                 userInfo.setPassword("123456");
                 DateTime localDate = DateUtil.parse("2020-01-23");
-                userInfo.setBirthday(localDate.toString());
-                userInfo.setCreateTime(LocalDateTime.now().toString());
+                userInfo.setBirthday(DateUtil.parse("2020-09-03","yyyy-MM-dd"));
+                userInfo.setCreateTime(LocalDateTime.now());
                 userDao.insertUser(userInfo);
             }
         } catch (SQLException throwables) {
