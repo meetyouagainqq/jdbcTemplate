@@ -1,6 +1,5 @@
 package com.javasm.demo.test;
 
-import cn.hutool.core.date.DatePattern;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.date.LocalDateTimeUtil;
@@ -8,9 +7,6 @@ import com.javasm.demo.dao.UserDao;
 import com.javasm.demo.dao.impl.UserDaoImpl;
 import com.javasm.demo.entity.UserInfo;
 import com.javasm.demo.util.DruidUtil;
-import org.junit.Test;
-
-import javax.print.attribute.UnmodifiableSetException;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
